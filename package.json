@@ -1,4 +1,11 @@
 {
   "name": "micro-app-monorepo",
-  "packageManager": "yarn@4.2.2"
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "packageManager": "yarn@4.2.2",
+  "devDependencies": {
+    "@yarnpkg/types": "^4.0.0"
+  }
 }
