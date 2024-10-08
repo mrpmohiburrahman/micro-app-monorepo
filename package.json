@@ -9,6 +9,8 @@
     "@yarnpkg/types": "^4.0.0"
   },
   "scripts": {
-    "postinstall": "yarn constraints --fix && yarn"
+    "preinstall": "yarn workspaces foreach run clean || true",
+    "postinstall": "yarn constraints --fix",
+    "create-app": "yarn create expo $1 && yarn constraints --fix"
   }
 }
